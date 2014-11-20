@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Parallel test runs]" parallel="tests">
+  <test name="T_01(failed)" parallel="tests">
+    <classes>
+      <class name="test_main.Test01">
+        <methods>
+          <include name="setUp"/>
+          <include name="testLink"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- test_main.Test01 -->
+      <class name="test_main.Test02">
+        <methods>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- test_main.Test02 -->
+      <class name="test_main.Test03">
+        <methods>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- test_main.Test03 -->
+    </classes>
+  </test> <!-- T_01(failed) -->
+  <test name="T_03(failed)" parallel="tests">
+    <classes>
+      <class name="test_main.Test01">
+        <methods>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- test_main.Test01 -->
+      <class name="test_main.Test02">
+        <methods>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- test_main.Test02 -->
+      <class name="test_main.Test03">
+        <methods>
+          <include name="testLink"/>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- test_main.Test03 -->
+    </classes>
+  </test> <!-- T_03(failed) -->
+</suite> <!-- Failed suite [Parallel test runs] -->
